@@ -1,0 +1,113 @@
+/* RecipeForm.css */
+
+.recipe-form-container {
+  max-width: 800px;
+  margin: 60px auto 2rem;
+  padding: 2rem;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
+}
+
+.recipe-form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.recipe-form-header h2 {
+  color: var(--text-color);
+}
+
+.full-width-input,
+.half-width-input,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--input-border-light);
+  border-radius: 4px;
+  background-color: var(--input-bg-light);
+  color: var(--input-text-light);
+}
+
+.half-width-input {
+  width: 48%;
+}
+
+.time-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ingredients-list,
+.methods-list {
+  margin-bottom: 1.5rem;
+}
+
+.ingredient-item,
+.method-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.ingredient-item input,
+.method-item textarea {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.quantity-input {
+  width: 100px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.remove-button,
+.add-button,
+.main-button {
+  background-color: var(--link-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.remove-button:hover,
+.add-button:hover,
+.main-button:hover {
+  background-color: var(--link-hover-color);
+}
+
+.image-preview {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.tags-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tag-checkbox {
+  display: flex;
+  align-items: center;
+}
+

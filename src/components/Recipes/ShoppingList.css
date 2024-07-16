@@ -1,0 +1,89 @@
+.shopping-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    padding: 2rem;
+  }
+  
+  .selected-recipes, .shopping-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .selected-recipe-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--bg-color);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .shopping-list-item, .selected-recipe-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--bg-color);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, text-decoration 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .shopping-list-item.completed {
+    background-color: var(--bg-color);
+    text-decoration: line-through;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    color: #d9534f;
+  }
+  
+  .icon.completed {
+    color: #28a745;
+  }
+  
+  .clear-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .clear-button:hover {
+    background-color: #c82333;
+  }
+  
+  .selected-recipe-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .selected-recipe-item button:hover {
+    background-color: #0056b3;
+  }
+  

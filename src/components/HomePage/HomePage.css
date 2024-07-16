@@ -1,0 +1,133 @@
+/* HomePage Styles */
+.homepage {
+  padding: 2rem;
+}
+
+.hero {
+
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color);
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+
+.message-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+  gap: 10px;
+  max-height: 10px;
+}
+
+.message {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message1 { animation-delay: 0.5s; grid-column: 2 / 2; grid-row: 1 / 2; }
+.message2 { animation-delay: 2s; grid-column: 1 / 2; grid-row: 2 / 3; }
+.message3 { animation-delay: 3.5s; grid-column: 1 / 2; grid-row: 3 / 4; }
+.message4 { animation-delay: 5s; grid-column: 2 / 3; grid-row: 4 / 5; }
+.message5 { animation-delay: 6.5s; grid-column: 2 / 2; grid-row: 5 / 6; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.get-started-container {
+  background-image: url('themaindish.jpg'); /* Ensure the path is correct */
+  color: var(--text-color);
+  width: 100%; /* Full width of the parent */
+  height: 500px; /* Adjust the height as needed */
+  background-size: cover; /* Scale the image to cover the container */
+  background-position: center; /* Center the image */
+  display: flex; /* Optional: Use flexbox to center content */
+  justify-content: center; /* Optional: Center content horizontally */
+  align-items: center; /* Optional: Center content vertically */
+  border-radius: 5%;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--link-color);
+  color: var(--button-text-color);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--link-hover-color);
+}
+
+.featured-recipes, .latest-recipes, .testimonials, .categories, .additional-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.recipe-grid, .category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.recipe-card, .category-card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.recipe-card h3, .category-card {
+  margin: 0;
+  padding: 1rem;
+}
+
+.recipe-card:hover, .category-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}

@@ -1,0 +1,217 @@
+/* Navbar Styles */
+.navbar {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+  display: flex;
+  width: 25%;
+  justify-content: left;
+}
+
+.nav-center {
+  flex-grow: 1;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.nav-right {
+  display: flex;
+  width: 25%;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--text-color);
+}
+
+.nav-link {
+  color: var(--text-color);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  padding: 0 10px;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem; /* Increase font size */
+  color: var(--text-color);
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+}
+
+.toggle:hover {
+  color: var(--link-hover-color);
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+}
+
+.dropdown {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  background-color: var(--bg-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  flex-direction: column;
+  width: 150px;
+  padding: 1rem;
+  z-index: 20;
+}
+
+.dropdown.show {
+  display: flex;
+}
+
+.dropdown .nav-link {
+  padding: 10px 0;
+}
+
+.account-menu {
+  cursor: pointer;
+  position: relative;
+}
+
+.account-menu .dropdown {
+  right: 0;
+}
+
+.nested-dropdown {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--bg-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  z-index: 30;
+}
+
+.nested-dropdown.show {
+  display: flex;
+}
+
+.nested-dropdown .nav-link {
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
+  .dropdown.show {
+    display: flex;
+    position: fixed;
+    top: 60px; /* Adjust based on your navbar height */
+    right: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Keep shadow for visual separation */
+  }
+  .account-menu .dropdown,
+  .recipes-menu .dropdown {
+    display: none; /* Hide account dropdown on smaller screens */
+  }
+  .account-menu .nested-dropdown,
+  .recipes-menu .nested-dropdown {
+    display: flex; /* Show nested dropdown on small screens */
+    position: fixed;
+    top: calc(60px + 50px + 10px); /* Adjust based on your navbar height and main dropdown height */
+    right: 1rem;
+    width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 769px) {
+  .account-menu .nested-dropdown,
+  .recipes-menu .nested-dropdown {
+    display: none; /* Hide nested dropdown on larger screens */
+  }
+}
+
+/* Dark/Light Mode Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--link-hover-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+

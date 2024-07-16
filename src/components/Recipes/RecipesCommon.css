@@ -1,0 +1,115 @@
+/* Main Containers */
+.my-recipes-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 80px;
+  }
+
+.search-recipes-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 80px;
+  }
+
+.recipes-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+/* Headers */
+h1, h2 {
+    text-align: center
+}
+
+/* MyRecipes & Favorites */
+.recipe-amount {
+    text-align: left;
+    margin-bottom: 15px;
+    margin-left: 5%;
+  }
+
+/* Tags - MyRecipes & SearchRecipes */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .tag-button {
+    padding: 0.5rem 1rem;
+    background-color: var(--link-color);
+    color: var(--button-text-color);
+    border: solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tag-button.active {
+    background-color: var(--hover-color);
+  }
+  
+  .tag-button:hover {
+    background-color: var(--link-hover-color);
+  }
+
+
+  /* Buttons - MyRecipes & SearchRecipes & RecipeForm*/ 
+  /* Look in global.css for main button styles */
+  /* Buttons - MyRecipes */
+  .button--add-recipe {
+    margin: 1rem auto;
+  }
+
+  /* Buttons - SearchRecipes */
+  .favorite-button.favorited {
+    background-color: green; /* Color indicating it has been favorited */
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .pagination-controls button {
+    padding: 0.5rem 1rem;
+    background-color: var(--link-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination-controls button:hover {
+    background-color: var(--link-hover-color);
+  }
+  
+  .pagination-controls span {
+    font-size: 1rem;
+  }
+  
+
+  /* SearchBar - MyReipes & SearchRecipes */
+  .search-input {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

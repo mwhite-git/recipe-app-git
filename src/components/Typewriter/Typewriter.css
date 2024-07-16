@@ -1,0 +1,12 @@
+.cursor {
+    font-weight: bold;
+    font-size: 1rem;
+    animation: blink 0.7s steps(5) infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  

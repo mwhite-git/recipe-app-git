@@ -1,0 +1,54 @@
+.recipe-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 60px;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.recipe-detail-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.recipe-detail-container h1,
+.recipe-detail-container h2 {
+  margin-top: 2rem;
+  color: var(--text-color);
+}
+
+.recipe-detail-container p {
+  text-align: left;
+  color: var(--text-color);
+}
+
+.recipe-detail-container ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.recipe-detail-container ul li {
+  margin-bottom: 0.5rem;
+}
+
+.tags-list {
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--link-color);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem; /* Added margin-bottom for better spacing */
+}
